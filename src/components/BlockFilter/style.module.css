@@ -1,0 +1,59 @@
+.blockFilter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    min-width: 150px;
+    height: 50px;
+    gap: 40px;
+    background: var(--vtorichnyy-svetlo-seryy);
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+
+.blockFilterActive {
+    background-color: var(--osnovnoy-fioletovyy);
+}
+
+.blockFilterText {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 127%;
+    color: var(--osnovnoy);
+    transition: color 0.3s ease;
+}
+
+.blockFilterActive .blockFilterText{
+    color: #fff;
+}
+
+.blockFilterImg {
+    width: 12px;
+    height: 10px;
+    transition: all 0.3s ease;
+    filter: none;
+    fill: var(--osnovnoy);
+    stroke: var(--osnovnoy);
+}
+
+.blockFilter:hover .blockFilterImg {
+    fill: #fff;
+    stroke: #fff;
+}
+
+
+.blockFilterActive .blockFilterImg {
+    transform: rotate(180deg);
+    fill: #fff;
+    stroke: #fff;
+}
+
+/* 
+.blockFilter:hover .blockFilterImg,
+.blockFilterActive .blockFilterImg {
+    filter: brightness(0) invert(1);
+} */

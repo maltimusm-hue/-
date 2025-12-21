@@ -1,0 +1,28 @@
+.CardBouquet {
+    border-radius: 10px;
+    width: 185px;
+    height: 90px;
+    background: var(--vtorichnyy-svetlo-seryy);
+    text-align: right;
+    overflow: hidden;
+}
+
+.CardBouquet__subtitle {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 127%;
+    color: var(--osnovnoy);
+    padding-top: 15px;
+    padding-left: 15px;
+    display: flex;
+}
+
+.CardBouquet_img {
+    width: 72px;
+    height: 86px;
+
+}
+.mirroring {
+    transform: scaleX(-1)
+}

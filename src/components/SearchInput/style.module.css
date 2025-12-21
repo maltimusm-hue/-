@@ -1,0 +1,32 @@
+.SearchInput {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  height: 50px;
+  max-width: 100%;
+  padding: 15px;
+
+  border-radius: 15px;
+background: var(--vtorichnyy-svetlo-seryy);
+}
+
+.SearchInput__icon {
+  flex-shrink: 0;
+}
+
+.SearchInput__field {
+  width: 100%;
+  border: none;
+  background: transparent;
+  outline: none;
+
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.SearchInput__field::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
