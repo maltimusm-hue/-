@@ -1,7 +1,7 @@
 import "../Home/home.css";
 import "./filter.css";
 import { useRef, useState } from "react";
-import { bouquets, FLOWERS } from "../../utils";
+import { bouquets, COLORS, FLOWERS, REASONS } from "../../utils";
 import CardBouquet from "../../components/CardBouquet/CardBouquet";
 import ButtonSlider from "../../components/ButtonSlider/ButtonSlider";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -11,6 +11,7 @@ import BlockFilter from "../../components/BlockFilter/BlockFilter";
 import FlowerFilter from "../../components/popups/FlowerFilter/FlowerFilter";
 import FilterPrice from "../../components/popups/FilterPrice/FilterPrice";
 import Products from "../../components/Products/Products";
+import FiltersFlowers from "../../components/popups/FiltersFlowers/CategoryMenu";
 
 
 
@@ -62,6 +63,10 @@ function Filter() {
         return <FilterPrice />;
       case "composition":
         return <FlowerFilter items={FLOWERS} />;
+      case "color":
+        return <FlowerFilter items={COLORS} />;
+      case "reason":
+        return <FlowerFilter items={REASONS} />;
       default:
         return null;
     }

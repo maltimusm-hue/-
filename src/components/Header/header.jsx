@@ -6,8 +6,13 @@ import time_icon from "../../assets/header/time.svg";
 import user_icon from "../../assets/header/user.svg";
 import basket_icon from "../../assets/icons/basket.svg";
 import "../Header/style.css";
+import CategoryMenu from "../popups/FiltersFlowers/CategoryMenu";
 
 function Header() {
+    const [activeFilter, setActiveFilter] = useState(false);
+    const openFilterMenu = () => {
+ setActiveFilter((prev) => (prev === true ? false :  true));
+    }
   return (
     <header className="header">
       <div className="container">
@@ -16,9 +21,10 @@ function Header() {
             <p className="header__nav-text">Витрина</p>
           </div>
           <div className="header__nav-controls">
-            <button className="header__nav-btn">
+            <button className="header__nav-btn" onClick={openFilterMenu}>
               <img src={catalog_icon} alt="каталог" />
             </button>
+            {activeFilter? <CategoryMenu activeFilter={activeFilter} /> : ""}
             <div className="header__nav-item">
               <img
                 className="header__nav-item-icon"
@@ -47,7 +53,7 @@ function Header() {
                 <p className="header__nav-choose-texts-subtitle">2025-09-16</p>
               </div>
             </div>
-            <button className="header__nav-btn">
+            <button className="header__nav-btn" onClick={openFilterMenu}>
               <img src={user_icon} alt="войти" />
             </button>
             <button className="header__nav-btn">
